@@ -65,6 +65,33 @@ ApplicationWindow
         }
     }
 
+    ListModel
+    {
+        id: cloudcasts
+
+        property var allcloudcasts
+
+        function update(username, callback)
+        {
+            request("https://api.mixcloud.com/" + username + "/cloudcasts/",
+            function (o)
+            {
+                allcloudcasts = JSON.parse(o.responseText)
+                logjson(allcloudcasts, "cloudcasts.update()")
+
+                clear()
+
+                for (var i=0 ; i<allcloudcasts.data.length ; i++)
+                {
+                    append( allcloudcasts.data[i] )
+                }
+
+                if (typeof callback === "function")
+                    callback()
+            })
+        }
+    }
+
 /***** Low level *****/
 
     function request(url, callback)

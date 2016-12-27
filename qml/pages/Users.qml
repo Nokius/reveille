@@ -52,12 +52,20 @@ Page
                         Label
                         {
 
-                            text: username
+                            text: name
                             font.pixelSize: Theme.fontSizeSmall
                             elide: Text.ElideRight
                             anchors.verticalCenter: parent.verticalCenter
                         }
                     }
+                    onClicked:
+                    {
+                        cloudcasts.update(username, function()
+                        {
+                            pageStack.push(Qt.resolvedUrl("Cloudcasts.qml"), { username: name })
+                        })
+                    }
+
                 }
             }
         }

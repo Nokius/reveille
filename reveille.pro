@@ -15,4 +15,5 @@ DISTFILES += \
     qml/pages/MainPage.qml \
     qml/harbour-reveille.qml \
     qml/pages/Users.qml \
-    qml/components/Messagebox.qml
+    qml/components/Messagebox.qml \
+    qml/pages/Cloudcasts.qml
