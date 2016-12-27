@@ -120,13 +120,13 @@ ApplicationWindow
     ConfigurationValue
     {
         id: verbose
-        key: "/apps/harbour-mixcloud/verbose"
+        key: "/apps/harbour-reveille/verbose"
         defaultValue: 1
     }
     ConfigurationValue
     {
         id: verbosejson
-        key: "/apps/harbour-mixcloud/verbosejson"
+        key: "/apps/harbour-reveille/verbosejson"
         defaultValue: 1
     }
 
